@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dolm’Énergie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      height: 80px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    header h1 {
+      margin: 0;
+      color: #0D7680;
+    }
+    .slider {
+      position: relative;
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+      background-color: #fff;
+    }
+    .gallery-img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .contact {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .contact a {
+      color: #0D7680;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      color: #666;
+    }
+  </style>
+
+<style>
+body.dark-mode {
+  background-color: #111 !important;
+  color: #eee !important;
+}
+body.dark-mode a {
+  color: #90e0ef !important;
+}
+body.dark-mode header {
+  background-color: #1a1a1a !important;
+}
+body.dark-mode .contact, 
+body.dark-mode .services, 
+body.dark-mode .gallery, 
+body.dark-mode footer {
+  background-color: #1e1e1e !important;
+  color: #eee !important;
+}
+body.dark-mode .floating-devis-btn {
+  background-color: #007B8A !important;
+}
+</style>
+
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const now = new Date();
+  const hour = now.getHours();
+  if (hour >= 18 || hour < 6) {
+    document.body.classList.add('dark-mode');
+  }
+});
+</script>
+
+</head>
+<body>
+
+
+
+
+<!-- Bouton devis flottant toujours visible -->
+<a href="mailto:dolmenergie@gmail.com?subject=Demande%20de%20devis%20via%20site%20web"
+   style="position: fixed; bottom: 20px; right: 20px; background-color: #0D7680;
+   color: white; padding: 15px 20px; font-size: 1rem; border-radius: 50px;
+   text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.4); z-index: 9999;">
+  📩 Devis
+</a>
+
+
+<header>
+  <img src="Logo transp.png" alt="Logo Dolm’Énergie">
+  <h1>Dolm’Énergie</h1>
+  <p>Avec DOLM’ENERGIE, trouvez la solution pour vos dépannages et projets électriques</p>
+</header>
+
+<section class="slider">
+  <div class="slide" style="background-image: url('web_IMG_4317.jpeg');"><div class="overlay"><p>Ponctuel, sérieux, et surtout un travail de qualité. Je recommande Dolm’Énergie les yeux fermés !</p></div></div><div class="slide" style="background-image: url('web_IMG_6953.jpeg');"><div class="overlay"><p>Travail propre, rapide et conforme à nos attentes. Rien à redire, à recommander !</p></div></div><div class="slide" style="background-image: url('web_IMG_8219.jpeg');"><div class="overlay"><p>Intervention efficace et très bon relationnel. Merci pour votre réactivité.</p></div></div><div class="slide" style="background-image: url('web_4CD9F9A3-3DAE-4964-A9D4-DD6431DC91B1.jpeg');"><div class="overlay"><p>Chantier impeccable, finitions soignées. Dolm’Énergie a toute ma confiance.</p></div></div><div class="slide" style="background-image: url('web_CD65F95F-2CEF-4950-8302-4C5A8E352C67.jpeg');"><div class="overlay"><p>Service rapide, à l’écoute, et excellent suivi du chantier.</p></div></div>
+</section>
+
+
+
+
+<section class="services" style="background-color: #fff; padding: 20px;">
+  <h2 style="text-align: center; color: #0D7680;">Nos domaines d'intervention</h2>
+  <ul style="max-width: 800px; margin: auto; padding: 0; list-style-type: none;">
+    <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><strong>⚡ Électricité générale</strong><br>
+      Installation complète, rénovation, mise en conformité NF C 15-100.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><strong>💡 Agencements d’éclairage intérieur & extérieur</strong><br>
+      Mise en lumière d’espaces de vie, jardins, terrasses, piscines, allées.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><strong>🔧 Automatisme</strong><br>
+      Motorisation et commande de portails, volets roulants, stores.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><strong>🚨 Dépannage électrique rapide</strong><br>
+      Intervention sous 24h en cas de panne, court-circuit, coupure ou défaut d’éclairage.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><strong>🌬️ Ventilation, domotique & borne de recharge</strong><br>
+      Pose de VMC, solutions connectées, IRVE (véhicules électriques).</li>
+  </ul>
+</section>
+
+
+
+<section class="devis" style="background-color: #0D7680; text-align: center; padding: 30px 20px;">
+  <a href="mailto:dolmenergie@gmail.com?subject=Demande%20de%20devis%20via%20site%20web" 
+     style="background-color: white; color: #0D7680; padding: 15px 30px; font-size: 1.2rem;
+     border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+    📩 Demander un devis
+  </a>
+</section>
+
+<section class="gallery">
+  <img src="web_IMG_4317.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/><img src="web_IMG_6953.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/><img src="web_IMG_8219.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/><img src="web_4CD9F9A3-3DAE-4964-A9D4-DD6431DC91B1.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/><img src="web_CD65F95F-2CEF-4950-8302-4C5A8E352C67.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/><img src="web_12762BCA-7656-448F-9688-B3CD9C19F53D.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/><img src="web_03C78F7B-8776-4DD4-89A4-E83E248F1A68.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/><img src="web_F98E6C66-9E20-43F9-8187-DDD579AB4EF3.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/><img src="web_71A817E2-8DD0-486A-AFB1-5FB4B9CABE7E.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/><img src="web_8961E39F-1DE2-42F9-870A-701B3FA04E6E.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/><img src="web_083b7388-1a28-4bca-aeab-8be893108a8f.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/><img src="web_IMG_0043.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/><img src="web_IMG_0013.jpeg" alt="Réalisation Dolm’Énergie" class="gallery-img"/>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <p>Email : <a href="mailto:dolmenergie@gmail.com">dolmenergie@gmail.com</a><br>
+     Téléphone : <a href="tel:+33783682515">07 83 68 25 15</a></p>
+  <p><a href="https://wa.me/33783682515" style="display:inline-block; font-size:0.95rem; padding:10px 15px; background-color:#25D366; color:white; border-radius:5px; text-decoration:none;">Contacter via WhatsApp</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Dolm’Énergie – Tous droits réservés
+</footer>
+
+<script>
+  let slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  showSlide(current);
+  setInterval(nextSlide, 5000);
+</script>
+
+
+<a href="mailto:dolmenergie@gmail.com?subject=Demande%20de%20devis%20via%20site%20web"
+   style="position: fixed; bottom: 20px; right: 20px; background-color: #0D7680;
+   color: white; padding: 15px 20px; font-size: 1rem; border-radius: 50px;
+   text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 999;">
+  📩 Devis
+</a>
+
+</body>
+</html>
