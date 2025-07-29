@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dolm'Énergie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+        }
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            font-size: 16px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .carousel-item {
+            min-width: 250px;
+            padding: 15px;
+            background: #eee;
+            border-radius: 10px;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #f4f4f4;
+            }
+            header {
+                background-color: #1a73e8;
+            }
+            .carousel-item {
+                background: #333;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue chez Dolm'Énergie</h1>
+    </header>
+    <div class="content">
+        <p>Spécialiste en installations électriques, rénovations, dépannages, éclairage piscine, automatismes, domotique, et plus.</p>
+        <h2>Avis clients</h2>
+        <div class="carousel">
+            <div class="carousel-item">⭐⭐⭐⭐⭐<br>Très professionnel et rapide !</div>
+            <div class="carousel-item">⭐⭐⭐⭐<br>Travail propre et efficace.</div>
+            <div class="carousel-item">⭐⭐⭐⭐⭐<br>Un artisan de confiance.</div>
+        </div>
+    </div>
+    <button class="floating-button">Demander un devis</button>
+</body>
+</html>
